@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Заголовок страницы</title>
+		<link rel="stylesheet" href="./style.css">
+	</head>
+	<body>		
+		<div class="global-wrapper">
+			<div class="main-wrapper">
+				<div class="workzone-wrapper">
+					<div id="_workzone"></div>
+				</div>
+				<div class="toolbar-wrapper">
+				<div class="toolbar" id="_toolbar">
+					<h4>Холст:</h4>
+
+					<p>Ячеек по вертикали:</p>
+					<p><input id="_height" type="number"></p>
+					<p>Ячеек по горизонтали:</p>
+					<p><input id="_width" type="number"></p>
+		
+					<p><b>Размеры ячейки (px):</b></p>
+					<table style="width:100%"><tr>
+						<td>
+							<p>Ширина:</p>
+							<p><input class="mini" id="_cell_width" type="number"></p>
+						</td><td>
+							<p>Высота:</p>
+							<p><input class="mini" id="_cell_height" type="number"></p>
+						</td>
+					</tr></table>
+
+					<p><b>Размеры холста (px):</b></p>
+					<table style="width:100%"><tr>
+						<td>
+							<p>Ширина:</p>
+							<p><input class="mini" id="_canvas_width" type="number"></p>
+						</td><td>
+							<p>Высота:</p>
+							<p><input class="mini" id="_canvas_height" type="number"></p>
+						</td>
+					</tr></table>
+
+					<div class="buttons-block">
+						<button id="_setSizes">Применить</button>
+						<button id="_clear">Очистка холста</button>
+						<button id='_load'>Загрузить</button>
+						<button id="_save">Сохранить</button>
+					</div>
+					<!--
+					<p><b>Сохранить холст</b></p>
+					<div class="save-block">
+						<input placeholder="Имя файла" id="_json_file_name">
+						<a class="button" download id="_save_json_btn"><p>Сохранить</p></a>
+					</div>-->
+					
+					<p><b>Загрузить изображения:</b></p>
+					<p><input type="file" multiple id="_files"></p>
+
+					<p><b>Глобальные фильтры:</b></p>
+					<div id="_global_filters"></div>
+
+					<div id="_imgtools">
+						<h4>Выделенное изображение</h4>		
+						<p><b>Загрузить изображение:</b></p>
+						<p><input type="file" id="_file"></p>
+						<p>Имя изображения:</p>
+						<p><input id="_imgname"></p>
+						<p>Слой:</p>
+						<p><input id="_layer" type="number" min="0" max="1000"/></p>
+						<div id="_filters"></div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+		<script src="./workzone.js"></script>
+		<script src="./app.js"></script>
+		<script src="./sizes.js"></script>
+		<script src="./api.js"></script>
+		<script src="./save.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+	</body>
+</html>
